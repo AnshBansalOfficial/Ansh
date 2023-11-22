@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Ansh_backend": {
+      "main": "src/Ansh_backend/main.mo",
+      "type": "motoko"
+    },
+    "Ansh_frontend": {
+      "dependencies": [
+        "Ansh_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Ansh_frontend/src/index.html"
+      },
+      "source": [
+        "src/Ansh_frontend/assets",
+        "dist/Ansh_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
